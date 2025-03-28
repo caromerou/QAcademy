@@ -14,6 +14,6 @@ export class HomePage {
   }
 
   async goto() {
-    await this.page.goto('https://automation-portal-bootcamp.vercel.app/');
+    await this.page.goto('https://automation-portal-bootcamp.vercel.app');
   }
 }
