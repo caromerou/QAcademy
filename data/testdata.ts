@@ -1,7 +1,7 @@
 export const userData = {
-    name: 'Ronaldo',
+    name: 'Elena',
     lastname :'Genes',
-    email:'ronaldogenes@gmail.com',
-    password:'Rgenes16*'
+    email:'genes@gmail.com',
+    password:'rgenes'
 
 }
