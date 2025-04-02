@@ -18,9 +18,9 @@ export class LoginPage {
     async goTo(){
         await this.page.goto('https://automation-portal-bootcamp.vercel.app/login');
     }
-    async loginCredentials(Email:string,Password:string){
-        await this.EmailInput.fill(Email);
-        await this.PasswordInput.fill(Password);
+    async loginCredentials(email:string,password:string){
+        await this.EmailInput.fill(email);
+        await this.PasswordInput.fill(password);
         await this.LoginButton.click();
     }
     

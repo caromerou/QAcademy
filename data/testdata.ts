@@ -1,7 +1,17 @@
-export const userData = {
-    name: 'Elena',
-    lastname :'Genes',
-    email:'genes@gmail.com',
-    password:'rgenes'
 
-}
+/*export const userData = {
+    name: '1323466',
+    lastname :'6562323',
+    email: '454515@gmail.com',
+    password: '8795916'
+
+}*/
+import {faker} from '@faker-js/faker';
+
+export const userData = {
+    name: faker.person.firstName(),
+    lastname: faker.person.lastName(),
+    email: faker.internet.email(),
+    password: faker.internet.password()
+};
+
