@@ -1,5 +1,6 @@
 import { Page, Locator } from "@playwright/test"; 
 
+
 export class RegisterPage {
     readonly page: Page;
     readonly nameInput:Locator;
@@ -20,8 +21,8 @@ export class RegisterPage {
     async goTo() {
         await this.page.goto('https://automation-portal-bootcamp.vercel.app/register');
     }
-    async fillRegisterUser(name:string,Lastname: string,Email: string,Password: string){
-        await this.nameInput.fill(name);
+    async fillRegisterUser(Name:string,Lastname: string,Email: string,Password: string){
+        await this.nameInput.fill(Name);
         await this.LastNameInput.fill(Lastname);
         await this.EmailInput.fill(Email);
         await this.PasswordInput.fill(Password);
