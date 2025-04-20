@@ -2,15 +2,16 @@ import { Page } from '@playwright/test';
 
 export class LoginPage {
   readonly page: Page;
-  readonly EmailInput;
-  readonly PasswordInput;
-  readonly LoginButton;
+  readonly emailInput;
+  readonly passwordInput;
+  readonly loginButton;
 
   constructor(page: Page) {
     this.page = page;
-    this.EmailInput = page.getByPlaceholder('Email');
-    this.PasswordInput = page.getByPlaceholder('Password');
-    this.LoginButton = page.getByRole('button', { name: 'Login' });
+    // Actualiza los selectores aquí
+    this.emailInput = page.locator('#loginEmail');  // Selector actualizado para el email
+    this.passwordInput = page.locator('#loginPassword'); // Selector actualizado para la contraseña
+    this.loginButton = page.locator('#login > div > div > div.tf-login-form > form > div.bottom > div:nth-child(2) > button'); // Selector para el botón de login
   }
 
   async goTo() {
@@ -18,8 +19,8 @@ export class LoginPage {
   }
 
   async loginCredentials(email: string, password: string) {
-    await this.EmailInput.fill(email);
-    await this.PasswordInput.fill(password);
-    await this.LoginButton.click();
+    await this.emailInput.fill(email);  // Rellena el campo de email
+    await this.passwordInput.fill(password);  // Rellena el campo de contraseña
+    await this.loginButton.click();  // Haz clic en el botón de login
   }
 }
